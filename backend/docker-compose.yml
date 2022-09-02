@@ -1,0 +1,25 @@
+version: '3'
+services:
+  database:
+    container_name: 'database-node'
+    restart: always
+    image: mysql:5.7
+    hostname: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: listadeip
+      MYSQL_USER: gustavo
+      MYSQL_PASSWORD: gustavo1
+    ports:
+      - "3306:3306"
+    volumes:
+      - c:/tmp/mysql:/var/lib/mysql
+  app:
+    container_name: 'node-api'
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on: 
+      - database
+      
