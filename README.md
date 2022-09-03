@@ -9,3 +9,4 @@
 1. Rode o comando docker-compose up -d para subir a API para um container de docker(necessita de docker instalado)
 1. Abra o arquivo frontend/index.html no seu navegador
 1. Clique em "Adicionar um IP ao filtro" para adicionar um IP que você não queira que esteja na lista.
+1. Link para a documentação da API: https://documenter.getpostman.com/view/22918285/VUxRQmyV
